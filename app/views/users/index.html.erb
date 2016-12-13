@@ -1,0 +1,28 @@
+<div class="subject">
+  <h1>Users &nbsp&nbsp</h1>
+  <h3><%= link_to "(click here to change to Json format)", "https://aqueous-ocean-76425.herokuapp.com/users.json" %></h3>
+</div>
+<hr>
+
+<table style="width:80%">
+  <tr>
+	<th>id</th>
+	<th>user_name</th>
+	<th>user_email</th>
+	<th>api_key</th>
+	<th></th>
+	<th></th>
+  </tr>   
+  
+  <%= render @users %>
+
+</table>
+
+<hr>
+ 
+<div id="flash_message" style="width: 300px; background: yellow; color: red"></div>
+
+<div id="error_messages"></div>
+<br>
+
+<%= render 'form' %>

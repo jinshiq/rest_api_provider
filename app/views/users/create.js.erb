@@ -1,0 +1,7 @@
+<% if @user.save %>
+	$("<%= escape_javascript(render @user) %>").appendTo("#users");
+<% end %>
+
+$("#flash_message").html('<%= notice %>');
+
+$("#error_messages").html('<%= j render('shared/error_messages', object: @user) %>');
